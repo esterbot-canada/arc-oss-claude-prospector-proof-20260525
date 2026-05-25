@@ -37,3 +37,7 @@ Thumbs.db
 .coverage
 htmlcov/
 coverage.xml
+
+.github/arc/agent-review-control/node_modules/
+.github/arc/agent-review-control/.next/
+.github/arc/agent-review-control/tmp/

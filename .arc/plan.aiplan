@@ -1,0 +1,26 @@
+version: "1"
+kind: "aiplan"
+status: "frozen"
+
+allowed_scope:
+  files:
+    - ".claude-plugin/plugin.json"
+    - "tests/test_plugin_manifest.py"
+
+excluded_scope:
+  files:
+    - "hooks/**"
+    - "src/**"
+    - "pyproject.toml"
+    - "uv.lock"
+    - ".github/arc/**"
+    - ".github/workflows/**"
+
+expected_evidence:
+  required_commands:
+    - "uv run pytest -q tests/test_plugin_manifest.py tests/test_dashboard_regen_hook.py"
+
+freeze:
+  created_by: "OpenClaw planner"
+  frozen_at: "2026-05-25T00:00:00-06:00"
+  contract_hash: "sha256:cd64460897fb00dbd2ec67371d18dc5386fb6ccfa4b12df5effafa30a99893a1"
